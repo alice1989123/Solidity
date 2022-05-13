@@ -35,6 +35,7 @@ contract SuperCoolNFT is ERC721 , Ownable {
    }
 
     function startAuction( ) public onlyOwner  {   
+      require( timeStart == 0, "Auction has already started"  );
       timeStart = block.timestamp;
 
          
